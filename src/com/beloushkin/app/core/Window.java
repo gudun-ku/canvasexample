@@ -46,13 +46,13 @@ public class Window extends Canvas {
         addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
-                MouseMotionEvent event = new MouseMotionEvent(e.getX(), e.getY(), false);
+                MouseMotionEvent event = new MouseMotionEvent(e.getX(), e.getY(), true);
                 onEvent(event);
             }
 
             @Override
             public void mouseMoved(MouseEvent e) {
-                MouseMotionEvent event = new MouseMotionEvent(e.getX(), e.getY(), true);
+                MouseMotionEvent event = new MouseMotionEvent(e.getX(), e.getY(), false);
                 onEvent(event);
             }
         });
